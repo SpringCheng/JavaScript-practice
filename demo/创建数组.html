@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var mycars=new Array()
+		mycars[0]="Saab";
+		mycars[1]="Volvo";
+		mycars[2]="BMW";
+
+		for (var i=0;i<mycars.length;i++) {
+			document.write(mycars[i]+"<br/>");
+		}
+
+		/*合并数组*/
+		var person=new Array();
+		person[0]="cheng";
+		person[1]="chun";
+		person[2]="spring";
+		person[3]="xu";
+		person[4]="mei";
+		person[5]="jun";
+		var ss=mycars.concat(person);
+
+		document.write(ss+"<br>");
+		document.write(ss.length+"<br>");
+
+		/*数组排序*/
+		document.write(person.sort()+"<br>");
+
+	</script>
+</body>
+</html>

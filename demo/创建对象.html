@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--
+		1.创建对象的方法
+			(1).直接创建  person=new Object();
+			(2).字面量literals {逗号隔开}
+			(3).使用对象构造器
+
+	-->
+	<script>
+		/*
+		直接创建
+		person=new Objdect();
+		person.firstname="Bill";
+		person.lastname="Gates";
+		person.age=23;
+		person.eyecolor="blue";
+		*/
+	
+		/*字面量创建
+		person1={
+			firstname:"Bill",
+			lastname:"gates",
+			age:56,
+			eyecolor:"blue"
+		}
+		document.write(person1.firstname+" is "+person1.age+" years old")
+		*/
+		/*
+		对象构造器
+		 */
+		function person(firstname,lastname,age,eyecolor){
+			this.firstname=firstname;
+			this.lastname=lastname;
+			this.age=age; sekl
+			this.eyecolor=eyecolor;
+		}
+		myFather=new person("Bill","Gates",56,"blue");
+		document.write(myFather.firstname+" is "+myFather.age+" years old");
+	</script>
+</body>
+</html>
