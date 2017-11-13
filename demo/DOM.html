@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Hello Word</p>
+	<div id="main">
+		<p>The Dom is very useful,this is getElementById</p>
+		<p>本例演示<b>getElementByTagName</b></p>
+		<p class="methos">这是getElementByClassName</p>
+	</div>
+	<hr>
+	<div id="one">
+		<p>this is test text,to get change THML content,</p>
+	</div>
+	<hr>
+	<div id="two">
+		<p>This is test text,to get getElementByTagName()</p>
+	</div>
+	<hr>
+	<div id="three">
+		<h1 id="H">原来内容</h1>
+		<button type="butotn" onclick="document.getElementById('H').style.color='red'">按钮</button>
+	</div>
+	<hr>
+	<div id="four">
+		<p id="visi">这是一段文本</p>
+		<input type="button" value="隐藏文本" onclick="document.getElementById('visi').style.visibility='hidden'">;
+		<input type="button" value="显示文本" onclick="document.getElementById('visi').style.visibility='visible'">;
+	</div>
+	<hr>
+	<div id="five">
+		<p onclick="this.innerHTML='谢谢！'">点击p标签上的元素会改变文本的内容</p>
+	</div>
+	<hr>
+	<div id="six">
+		<script>
+			function changetext(id){
+				id.innerHTML="函数！";
+			}
+		</script>
+		<p onclick="changetext(this)">点击改变文本内容，函数</p>
+	</div>
+	<hr>
+	<div id="seven">
+		<p>点击按钮就可以改变displayDate()函数</p>
+		<button onclick="displayDate()">点击这里</button>
+		<script>
+			function displayDate(){
+				document.getElementById("demo").innerHTML=Date();
+			}
+		</script>
+		<p id="demo"></p>
+	</div>
+	<hr>
+	<!-- <div id="eight">
+		<p>点击按钮时可以执行<em>displayDate()</em>函数</p>
+		<button id="myBtn">点击这里</button>
+		<script>
+			document.getElementById("myBtn").onclick()=function()
+			{
+				displayDate()
+			};
+			function displayDate(){
+				document.getElementById('demo2').innerHTML=Date();
+			}
+		</script>
+		<p id="demo2"></p>
+	</div>
+</body> -->
+</html>
+<script>
+	/*
+	DOM简介：
+	JavaScript能够改变页面中所有的HTML元素，
+	    {
+	    通过id（getElementById）
+	    标签名(getElementByTagName)
+	    类名(getElementByClassName)
+	    }
+	JavaScript能够改变页面中的所有HTML属性
+	JavaScript能够改变页面中的所有CSS样式
+	JavaScript能够对页面中的所有时间做出反应。
+
+	1.改变HTML输出流
+	document.write();
+	2.改变HTML内容
+	document.getElementById(id).innerHTML=new HTML
+	3.改变HTML属性
+	document.getElementById(id).attribute=new value;
+	4.改变HTML样式
+	document。getElementById(id).style.attribute=value;
+	 */
+	/*
+	var x=document.getElementById("main");
+	var y=x.getElementsByClassName("methos");
+	document.write('类名为"methos"的p标签中的文本是：'+y[1].innerHTML);
+
+	var a=document.getElementById("two");
+	var b=a.getElementsByTagName("p");
+	document.write('id为"two"的div中的第一段文本是：'+y[0].innerHTML);
+	
+	document.getElementById("mian").innerHTML="改变THML的内容"
+	*/
+	document.getElementById("main").style.fontFamily="Arial";
+	document.getElementById("one").style.color="red";
+	document.getElementById("two").style.fontSize="larger";
+
+
+</script>

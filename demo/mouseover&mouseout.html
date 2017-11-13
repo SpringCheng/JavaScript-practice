@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#main{
+			background-color: green;
+			width: 120px;
+			height: 20px;
+			padding: 40px;
+			color: #ff00ff
+		}
+	</style>
+</head>
+<body>
+	<div id="main" onmouseover="mOver(this)" onmouseout="mOut(this)">
+		把鼠标移动到是上面
+	</div>
+	<script>
+		function mOver(obj){
+			obj.innerHTML="谢谢"
+		}
+
+		function mOut(obj){
+			obj.innerHTML="把鼠标移动到上面"
+		}
+	</script>
+</body>
+</html>

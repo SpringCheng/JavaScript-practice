@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*1.计算字符串长度*/
+		var x="Hello  World!";
+		document.write(x.length+"<br>");
+		document.write(x+"<br>");
+		/*2.为字符串添加样式*/
+		document.write(x.big()+"<br>");
+		document.write(x.small()+"<br>");
+		document.write(x.italics()+"<br>");
+		document.write(x.fontcolor("red")+"<br>");
+		document.write(x.fontsize(20)+"<br>");
+		document.write(x.toLowerCase()+"<br>");
+		document.write(x.toUpperCase()+"<br>");
+		document.write(x.sup()+"<br>");
+		document.write(x.sub()+"<br>");
+		document.write(x.link("http://www.baidu.com")+"<br>");
+		/*3.indexOf() 查找字符串出现的位置
+			字符串没有出现，返回-1；
+		*/
+		document.write(x.indexOf("Hello")+"<br>");
+		document.write(x.indexOf("world")+"<br>");
+		document.write(x.indexOf("World")+"<br>");
+		/*4.match() 查找字符串中特定的字符
+			字符串没有出现，返回null.
+		*/
+		document.write(x.match("World")+"<br>");
+		document.write(x.match("world")+"<br>");
+		document.write(x.match("World!")+"<br>");
+		/*5.replace()替换*/
+		document.write(x.replace(/World/,"JavaScript"));
+
+	</script>
+</body>
+</html>

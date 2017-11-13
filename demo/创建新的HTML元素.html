@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div1">
+		<p id="p1">这是第一个段落</p>
+		<p id="p2">这是第二个段落</p>
+	</div>
+	<script>
+		var para=document.createElement("p");
+		var node=document.createTextNode("这是新段落");
+		para.appendChild(node);
+
+		var element=document.getElementById('div1');
+		element.appendChild(para);
+	</script>
+	<!--
+		1.创建新的p元素createElement()
+		2.创建文本节点createTextNode()
+		3.添加节点到p元素  para.appendChild(node);
+		4.向一个已有的元素添加新元素 element.appendChild(para);
+	-->
+</body>
+</html>
