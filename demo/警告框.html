@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function disp_alert(){
+			alert("再次向你问好！在这里，我们向您演示"+"\n"+"如何向警告框这行。"+"<br>")
+		}
+		
+		function show_confirm(){
+			var r=confirm("you pressd ok");
+			if (r==true) {
+				alert("You perssed ok!")
+			}
+			else{
+				alert("You pressed Cancel");
+			}
+		}
+	</script>
+	<input type="button" name="we" value="显示警告框" onclick="disp_alert()">
+	<input type="button"  value="Show a confirm box" onclick="show_confirm()">
+</body>
+</html>

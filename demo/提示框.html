@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function disp_prompt(){
+			var name=prompt("请输入你的名字", "Bill Gates");
+			if (name!=null&&name!="") {
+				document.write("您好！"+name+",今天过的怎么样？")
+			}
+		}
+	</script>
+	<input onclick="disp_prompt()" value="显示提示框" type="button"></input>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a=new RegExp("e");
+		document.write(a.test("the best thing in life are free")+"<br>");
+		document.write(a.exec("the best thing in life are free")+"<br>");
+
+		var b=new RegExp("e","g");
+		do{
+			result=b.exec("the best thing in life are free"+"<br>");
+			document.write(result);
+		}
+		while (result!=null); 
+
+		var c=new RegExp("e");
+		document.write(a.test("the best thing in life are free")+"<br>");
+		a.compile("d");
+		document.write(a.test("the best thing in life are free")+"<br>");
+
+	</script>
+</body>
+</html>

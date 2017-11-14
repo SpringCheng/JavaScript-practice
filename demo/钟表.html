@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function startTime(){
+		var d=new Date();
+        var h=d.getHours();
+		var m=d.getMinutes();
+		var s=d.getSeconds();
+		//checkTime()小于10的前面加0
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+		t=setTimeout('startTime()',500);
+}
+		function checkTime(i){
+			if (i<10) {
+				i="0"+i;
+			}
+			return i;
+		}		
+	</script>	
+</head>
+<body onload="startTime()">
+	<div id="txt"></div>
+</body>
+</html>
