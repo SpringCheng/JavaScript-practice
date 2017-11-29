@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var aBtn=document.getElementsByTagName('input');
+			var aP=document.getElementsByTagName('p');
+			var arr=['张三','李四','王五'];
+
+			for (var i = 0; i < aBtn.length; i++) {
+				aBtn[i].index=i;   //添加索引值
+				aBtn[i].onclick=function(){
+					// alert(arr[this.index]);
+					this.value=arr[this.index];
+					aP[this.index].innerHTML=arr[this.index];
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="按钮1">
+	<input type="button" value="按钮2">
+	<input type="button" value="按钮3">
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+</body>
+</html>

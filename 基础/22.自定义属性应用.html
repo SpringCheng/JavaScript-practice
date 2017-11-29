@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			list-style: none;
+			width: 350px;
+			height: 196px;
+			background: url('images/1.jpg');
+			float: left;
+			margin: 10px;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var aLi=document.getElementsByTagName('li');
+
+			for (var i = 0; i < aLi.length; i++) {
+				aLi[i].onOff=true;
+
+				aLi[i].onclick=function(){
+					if (this.onOff) {
+						this.style.background = 'url(images/2.jpg)';
+						this.onOff=false;
+					}else{
+						this.style.background = 'url(images/1.jpg)';
+						this.onOff=false;
+					}
+					
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

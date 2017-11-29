@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.red{
+			width: 300px;
+			background: #ff0000;
+			padding: 20px;
+			color: #00ffff;
+			border: 1px solid #000000;
+		}
+		.yellow{
+			width: 300px;
+			background: #00ffff;
+			padding: 20px;
+			color: #ff00ff;
+			border: 1px solid #000000;			
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var oBtn1=document.getElementById('btn1');
+			var oBtn2=document.getElementById('btn2');
+			var oBtn3=document.getElementById('btn3');
+			var oBtn4=document.getElementById('btn4');
+			var oP=document.getElementById('p1');
+
+			var num=16;
+			oBtn1.onclick=function(){
+				num--;
+				oP.style.fontSize =num+'px';
+			};
+			oBtn2.onclick=function(){
+				num++;
+				oP.style.fontSize = num+'px';
+			};
+
+			oBtn3.onclick=function(){
+				oP.className='red';
+			}
+			oBtn4.onclick=function(){
+				oP.className='yellow';
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<input type="button" id="btn1" value="-">
+	<input type="button" id="btn2" value="+">
+	<input type="button" id="btn3" value="红">
+	<input type="button" id="btn4" value="黄">
+	<P id="p1">
+		解放前，苏尼特右旗人民群众的文化生活可以说是空白的，全旗有极少数的民间艺人为王府服务，普通老百姓没有欣赏歌舞的权利。1949年以后，在中国共产党的领导下，苏尼特右旗民间文艺活动开始活跃。同年10月，苏尼特右旗人民政府在温都尔庙成立文化室，组建农牧民业余文艺宣传队。工作重点为宣传党的方针政策和路线，为农牧业生产服务，为普及文化教育服务。由于文化室业余文化宣传队的组织和演出方式不适应牧区地广人稀的特点，1957年，内蒙古自治区文化厅党组决定改造旗县文化室，组织小型、流动、多功能的文艺工作队伍。1957年6月17日，全国第一支乌兰牧骑宣告成立。
+	</P>
+</body>
+</html>

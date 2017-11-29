@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var oBtn=document.getElementById('btn1');
+			var oUl=document.getElementById('list');
+			var arr=[
+			'12月起施行新规:网盘涉淫秽信息依法可追刑责',
+			'1-10月工业企业利润增23.3% 企业效益持续改善',
+			'中国工程院2017年院士增选结果公布',
+			'监管暂停批设网贷公司：牌照或有价无市',
+			'人民网直播：中国与葡语国家智库高峰会'
+			];
+			var onOff=true;
+
+			oBtn.onclick=function(){
+				// oBtn.disabled=true;
+				// oBtn.style.display = 'none';
+				if (onOff) {
+					for (var i = 0; i < arr.length; i++) {
+						oUl.innerHTML+='<li>'+arr[i]+'</li>';
+					}
+					onOff=false;					
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="" id="btn1" value="点击生成五条新闻">
+	<ul id="list">
+	</ul>
+</body>
+</html>

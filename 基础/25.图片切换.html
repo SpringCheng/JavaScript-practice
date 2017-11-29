@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			background: #333;
+		}
+		#pic{
+			width: 350px;
+			height: 196px;
+			position: relative;
+			margin: 0 auto;
+			background: url('images/0.jpg') no-repeat center #fff;
+		}
+		#pic img{
+			width: 350px;
+			height: 196px;
+		}
+		#pic ul{
+			width: 40px;
+			position: absolute;
+			top: 0;
+			right: -50px;
+		}
+		#pic li{
+			width: 40px;
+			height: 40px;
+			margin-bottom: 4px;
+			background: #666;
+		}
+		#pic .active{
+			background: #B9AB1F;
+		}
+		#pic span{
+			top: 0;
+		}
+		#pic p{
+			bottom: 0;
+			margin: 0;#FFFFFF
+		}
+		#pic p,#pic span{
+			position: absolute;
+			left: 0;
+			width: 350px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background: #000;
+			color: #FDFAFA;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var oDiv=document.getElementById('pic');
+			var oImg=document.getElementsByTagName('img')[0];
+			var oSpan=document.getElementsByTagName('span')[0];
+			var oP=document.getElementsByTagName('p')[0];
+			var oUl=document.getElementsByTagName('ul')[0];
+			var aLi=oUl.getElementsByTagName('li');
+			var arrUrl=['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg'];
+			var arrText=['美女','非主流','战争','机器人'];
+
+			//初始化
+			var num=0;
+
+			oImg.src=arrUrl[num];
+			oSpan.innerHTML=1+num+'/'+arrUrl.length;
+			oP.innerHTML=arrText[num];
+			for (var i = 0; i < arrUrl.length; i++) {
+				oUl.innerHTML+='<li></li>';
+			}
+			aLi[num].className='active';
+		}
+	</script>
+</head>
+<body>
+	<div id="pic">
+		<img>
+		<span>1/6</span>
+		<p>图片说明...</p>
+		<ul></ul>
+	</div>
+</body>
+</html>

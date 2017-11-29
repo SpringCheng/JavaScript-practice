@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oText=document.getElementById('Text1');
+			var oBtn=document.getElementById('btn');
+
+			oBtn.onclick=function(){
+				if (oText.value=='') {
+					alert('哥们，写点东西吧！')
+				}else if (oText.value=='CSS') {
+					alert('哥们，你写的是CSS，恭喜通过！')
+				}else if (oText.value=='css') {
+					alert('哥们，你写的是css，恭喜通过！')
+				}else if (oText.value=='javascript') {
+					alert('哥们，你写的是javscript，恭喜通过！')
+				}else{
+					alert('不好意思你输入的东西是：'+oText.value+'不允许通过！')
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	输入口令：<input type="text" name="" id="Text1">
+	<input type="button" name="" id="btn" value="确认">
+</body>
+</html>
